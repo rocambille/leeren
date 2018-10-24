@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="../leeren.css">
+    <style media="screen">
+      .container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      .card {
+        border: 1px solid gray;
+        border-radius: 5px;
+        width: 300px;
+        font-family: sans-serif;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body class="container _space_inset">
+
+    <template>
+
+      <article class="card _space_inline _space_stack">
+        <img src="https://picsum.photos/300/200" alt="">
+        <div class="_space_inset">
+          <h2 class="_space_stack">lorem ipsum</h2>
+          <p class="_space_stack">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat.</p>
+        </div>
+      </article>
+
+    </template>
+
+    <script>
+      const card = document.querySelector("template");
+
+      for (let i = 0; i < 7; i++) {
+        document.body.appendChild(
+          card.content.cloneNode(true)
+        );
+      }
+    </script>
+
+  </body>
+</html>
